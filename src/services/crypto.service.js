@@ -7,7 +7,7 @@ export const generatePassphrase = () => {
 }
 
 export const generateKeyPair = (passphrase) => {
-  const key = cryptico.generateRSAKey(passphrase, 1024)
+  const key = cryptico.generateRSAKey(passphrase, 4096)
   return {
     privateKey: key,
     publicKey: cryptico.publicKeyString(key)
